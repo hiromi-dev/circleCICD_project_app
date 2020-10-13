@@ -1,23 +1,24 @@
-# プロジェクト開始 command
+# README
 
-```
-1)$ docker-compose run --rm --no-deps web rails new . -fT -d postgresql
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-2)$ docker-compose build
+Things you may want to cover:
 
-3)config/database.ymlへ移動しデータベースと接続
+* Ruby version
 
-4)$ docker-compose run --rm web rails db:create
+* System dependencies
 
-5)$ docker-compose up -d
-```
+* Configuration
 
-## gem 追加
+* Database creation
 
-```
-$ docker-compose run web bundle install
+* Database initialization
 
-sh接続で確認
-$ docker-compose run web sh
+* How to run the test suite
 
-```
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
