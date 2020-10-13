@@ -43,8 +43,8 @@ jobs:
       - run:
           name: Push docker image
           command: |
-            docker push ${ecr_domain}:$circle_sha1
-            docker push ${ecr_domain}:latest
+            docker push ${ECR_DOMAIN}:$CIRCLE_SHA1
+            docker push ${ECR_DOMAIN}:latest
 workflows:
   version: 2
   test:
