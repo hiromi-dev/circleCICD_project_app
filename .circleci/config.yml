@@ -39,7 +39,7 @@ jobs:
       - run:
           name: build image
           command: |
-            docker build -t ${ecr_domain}:$circle_sha1 -t ${ecr_domain}:latest .
+            docker build -t ${ECR_DOMAIN}:$CIRCLE_SHA1 -t ${ECR_DOMAIN}:latest .
       - run:
           name: Push docker image
           command: |
