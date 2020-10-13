@@ -39,12 +39,12 @@ jobs:
       - run:
           name: build image
           command: |
-            docker build -t ${ECR_DOMAIN}:$circle_sha1 -t ${ECR_DOMAIN}:latest .
+            docker build -t ${ecr_domain}:$circle_sha1 -t ${ecr_domain}:latest .
       - run:
           name: Push docker image
           command: |
-            docker push ${ECR_DOMAIN}:$circle_sha1
-            docker push ${ECR_DOMAIN}:latest
+            docker push ${ecr_domain}:$circle_sha1
+            docker push ${ecr_domain}:latest
 workflows:
   version: 2
   test:
