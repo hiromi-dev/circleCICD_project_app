@@ -67,7 +67,7 @@ jobs:
           command: |
             aws ecs describe-task-definition --task-definition circleCI-app-service | jq '.taskDefinition | { containerDefinitions: .containerDefinitions }' > definition.json
             aws ecs register-task-definition --family circleCI-app-service --cli-input-json file://definition.json
-            aws ecs update-service --cluster aws_ecs_cluster --service circleCI-app-service --task-definition circleCI-app-service
+            aws ecs update-service --cluster circleCI-ecs-cluster --service circleCI-app-service --task-definition circleCI-app-service
 workflows:
   version: 2
   test:
